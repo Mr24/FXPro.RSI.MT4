@@ -13,7 +13,7 @@
 //+------------------------------------------------------------------+
 #property copyright "Copyright(c) 2016 -, VerysVery Inc. && Yoshio.Mr24"
 #property link      "https://github.com/VerysVery/MetaTrader4/"
-#property description "VsV.MT4.VsVRSI - Ver.1.0.2 Update:2017.01.05"
+#property description "VsV.MT4.VsVRSI - Ver.1.0.3 Update:2017.01.05"
 #property strict
 
 //--- RSI : Initial Setup ---//
@@ -218,20 +218,13 @@ int OnCalculate(const int rates_total,
 
     if(ExtNegBuffer[i]!=0.0)
       ExtRSIBuffer[i]=100.0-100.0/(1+ExtPosBuffer[i]/ExtNegBuffer[i]);
-      // 
-      // ObjectSetDouble(0, "RSI.Center", ExtRSIBuffer[i], 50.0);
-
+      
     else
     {
       if(ExtPosBuffer[i]!=0.0)
         ExtRSIBuffer[i]=100.0;
-        //
-        // ObjectSetDouble(0, "RSI.Center", ExtRSIBuffer[i], 50.0);
-
       else
         ExtRSIBuffer[i]=50.0;
-        //
-        // ObjectSetDouble(0, "RSI.Center", ExtRSIBuffer[i], 50.0);
     }
   }
 //--- RSI.Calculate.END ---//
