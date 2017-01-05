@@ -13,7 +13,7 @@
 //+------------------------------------------------------------------+
 #property copyright "Copyright(c) 2016 -, VerysVery Inc. && Yoshio.Mr24"
 #property link      "https://github.com/VerysVery/MetaTrader4/"
-#property description "VsV.MT4.VsVRSI - Ver.1.0.1 Update:2017.01.05"
+#property description "VsV.MT4.VsVRSI - Ver.1.0.2 Update:2017.01.05"
 #property strict
 
 //--- RSI : Initial Setup ---//
@@ -51,8 +51,6 @@ double ExtNegBuffer[];
 // input color   InpColor01  = Blue;               // RSI.Center - Color
 // input ENUM_LINE_STYLE InpStyle01 = STYLE_SOLID; // RSI.Center - Style
 // input int     InpWidth01  = 1;                  // RSI.Center - Width
-
-
 
 
 //+------------------------------------------------------------------+
@@ -245,10 +243,6 @@ ObjectSetDouble(0, "RSI.Top", OBJPROP_PRICE, 60.00);
 ObjectSetDouble(0, "RSI.Btm", OBJPROP_PRICE, 40.00);
 ObjectSetDouble(0, "RSI.70", OBJPROP_PRICE, 70.00);
 ObjectSetDouble(0, "RSI.30", OBJPROP_PRICE, 30.00);
-
-// ### double ExtRSIBuffer[i] ###
-// ObjectSetInteger(0, "RSI.Center", ExtRSIBuffer[0], 50);
-// ObjectSetInteger(0, "RSI.Center", OBJPROP_PRICE, 50);
 //--- RSI.Holizontal.Line.END ---//
 
 
